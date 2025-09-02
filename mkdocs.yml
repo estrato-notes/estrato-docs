@@ -1,0 +1,36 @@
+site_name: Estrato - Documentação
+theme:
+  name: material
+
+  palette:
+    - scheme: default
+      primary: deep orange
+      toggle: 
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: deep orange
+      toggle: 
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+nav:
+  - 'Visão Geral': 'index.md'
+  - 'Planejamento':
+    - 'Backlog': 'planejamento/backlog.md'
+    - 'Diagrama de Classes': 'planejamento/uml-diagram.md'
+    - 'Histórias de Usuário': 'planejamento/us.md'
+  - 'Design':
+    - 'Protótipo de Alta Fidelidade': 'design/prototype.md'
