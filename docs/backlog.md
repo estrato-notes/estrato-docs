@@ -65,6 +65,8 @@ Esse épico foca na criação, edição e organização de notas, pastas e tags.
 
 > [1] **Scrum Guide:** "The Product Backlog is an emergent, ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team." - *Schwaber, K., & Sutherland, J. (2020). The Scrum Guide.*
 
+---
+
 > [2] **Mike Cohn (Autor de "User Stories Applied"):** "User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system." - *Cohn, M. (2004). User Stories Applied: For Agile Software Development.*
 
 ## Histórico de Versões
