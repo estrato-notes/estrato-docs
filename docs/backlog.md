@@ -63,6 +63,14 @@ Esse épico agrupa as funcionalidades que ajudam o usuário a visualizar e acess
 
 ---
 
+## 4. Product Backlog
+
+A seguir, é possível visualizar o product backlog do Estrato, contendo todas as US definidas anteriormente:
+
+![print do product backlog](assets/backlog.png)
+
+- Para poder visualizar a planilha [clique aqui!](https://docs.google.com/spreadsheets/d/1fDKRcdXv5BMut88IXpOzje3FCZU1iQTfythdHdo6GFI/edit?usp=sharing)
+
 ## Fontes
 
 > [1] **Scrum Guide:** "The Product Backlog is an emergent, ordered list of what is needed to improve the product. It is the single source of work undertaken by the Scrum Team." - *Schwaber, K., & Sutherland, J. (2020). The Scrum Guide.*
@@ -76,3 +84,4 @@ Esse épico agrupa as funcionalidades que ajudam o usuário a visualizar e acess
 | Versão | Descrição     | Autor                                            |
 | :----: | ------------- | ------------------------------------------------ |
 | 1.0    | Adição das US | [Andre Cláudio](https://github.com/andre-maia51) |
+| 1.1    | Adição do Product Backlog completo | [Andre Cláudio](https://github.com/andre-maia51) |
