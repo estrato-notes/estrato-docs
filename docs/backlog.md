@@ -61,7 +61,7 @@ Esse épico agrupa as funcionalidades que ajudam o usuário a visualizar e acess
 | **US19**  | Ter um campo de captura rápida no dashboard | Salvar uma ideia sem precisar criar uma nota completa |
 | **US20**  | Definir um lembrete, com data, em uma nota  | Vê-lo no dashboard, para não perder prazos |
 
-### 3.3 Épico Template
+### 3.4 Épico Template
 
 Esse épico agrupa as funcionalidades que ajudam o usuário a melhorar sua produtividade baseado em templates.
 
