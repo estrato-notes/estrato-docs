@@ -61,6 +61,17 @@ Esse épico agrupa as funcionalidades que ajudam o usuário a visualizar e acess
 | **US19**  | Ter um campo de captura rápida no dashboard | Salvar uma ideia sem precisar criar uma nota completa |
 | **US20**  | Definir um lembrete, com data, em uma nota  | Vê-lo no dashboard, para não perder prazos |
 
+### 3.3 Épico Template
+
+Esse épico agrupa as funcionalidades que ajudam o usuário a melhorar sua produtividade baseado em templates.
+
+| ID    | Eu, como usuário, gostaria de... | Para poder... |
+| :---: | -------------------------------- | ------------- |
+| **US21**  | Salvar uma nota como template | Reutilizar sua estrutura e conteúdo no futuro |
+| **US22**  | Criar uma nova nota a partir de um template | Iniciar meu trabalho mais rapidamente e com um formato definido |
+| **US23**  | Editar meus templates | Mantê-los atualizados |
+| **US24**  | Deletar meus templates | Manter apenas os templates necessários para mim |
+
 ---
 
 ## 4. Product Backlog
@@ -85,3 +96,4 @@ A seguir, é possível visualizar o product backlog do Estrato, contendo todas a
 | :----: | ------------- | ------------------------------------------------ |
 | 1.0    | Adição das US | [Andre Cláudio](https://github.com/andre-maia51) |
 | 1.1    | Adição do Product Backlog completo | [Andre Cláudio](https://github.com/andre-maia51) |
+| 1.2    | Adição do novo épico e novas US | [Andre Cláudio](https://github.com/andre-maia51) |
