@@ -13,6 +13,7 @@ Um Épico é uma grande história de usuário (ou um grande corpo de trabalho) q
 - **Usuário**
 - **Notas**
 - **Dashboard**
+- **Template**
 
 ---
 
