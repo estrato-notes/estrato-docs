@@ -28,9 +28,6 @@ theme:
 
 nav:
   - 'Visão Geral': 'index.md'
-  - 'Planejamento':
-    - 'Backlog': 'planejamento/backlog.md'
-    - 'Diagrama de Classes': 'planejamento/uml-diagram.md'
-    - 'Histórias de Usuário': 'planejamento/us.md'
-  - 'Design':
-    - 'Protótipo de Alta Fidelidade': 'design/prototype.md'
+  - 'Backlog': 'backlog.md'
+  - 'Diagrama de Classes': 'uml-diagram.md'
+  - 'Protótipo de Alta Fidelidade': 'prototype.md'
