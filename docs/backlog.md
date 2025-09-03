@@ -52,6 +52,8 @@ Esse épico foca na criação, edição e organização de notas, pastas e tags.
 
 ### 3.3 Épico Dashboard
 
+Esse épico agrupa as funcionalidades que ajudam o usuário a visualizar e acessar suas informações mais relevantes.
+
 | ID    | Eu, como usuário, gostaria de... | Para poder... |
 | :---: | -------------------------------- | ------------- |
 | **US17**  | Ver minhas notas acessadas recentemente no dashboard | Retomar meu trabalho rapidamente |
