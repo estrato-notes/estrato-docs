@@ -4,7 +4,15 @@ Um Protótipo de Alta Fidelidade é um modelo interativo e visualmente detalhado
 
 ## Protótipo Estrato
 
-- **Adicionar o Protótipo**
+<iframe
+style="border: 1px solid rgba(0, 0, 0, 0.1);"
+width="800"
+height="450"
+src="https://embed.figma.com/design/wmUiUCJMbyCzg5Dn3aHpB4/estrato-prototype?node-id=0-1&embed-host=share"
+allowfullscreen
+></iframe>
+
+- Para poder visualizar o PDF do protótipo [clique aqui!](https://drive.google.com/file/d/1Fow1ucaGltNhbtPpAMGzvdcqm7hW1sZn/view?usp=sharing)
 
 ---
 

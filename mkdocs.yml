@@ -1,16 +1,18 @@
 site_name: Estrato - Documentação
 theme:
   name: material
+  logo: assets/simbol-white2.svg
+  favicon: assets/simbol-white2.svg
 
   palette:
     - scheme: default
-      primary: deep orange
+      primary: grey
       toggle: 
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
 
     - scheme: slate
-      primary: deep orange
+      primary: grey
       toggle: 
         icon: material/toggle-switch
         name: Switch to light mode
