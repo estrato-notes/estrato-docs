@@ -1,12 +1,15 @@
+repo_url: https://github.com/orgs/estrato-notes/repositories
+repo_name: Estrato
+
 site_name: Estrato - Documentação
 theme:
   name: material
-  logo: assets/logo/simbol-white2.svg
-  favicon: assets/logo/simbol-grey2.svg
+  logo: assets/logo/logo-white.svg
+  favicon: assets/logo/logo-blue.svg
 
   palette:
     - scheme: default
-      primary: grey
+      primary: indigo
   
   features:
     - navigation.tabs

@@ -28,7 +28,7 @@ Esse épico abrange as funcionalidades relacionadas à criação, autenticação
 | ID    | Eu, como usuário, gostaria de... | Para poder... |
 | :---: | -------------------------------- | ------------- |
 | **US01**  | Quero me cadastrar na plataforma | Ter um espaço seguro para minhas anotações |
-| **US02**  | Fazer Login no siste             | Acessar meu dashboard |
+| **US02**  | Fazer Login no site             | Acessar meu dashboard |
 | **US03**  | Quero editar as informações de meu perfil | Manter meus dados atualizados |
 | **US04**  | Fazer logout da minha conta      | Garantir a segurança dos meus dados |
 
@@ -46,9 +46,8 @@ Esse épico foca na criação, edição e organização de notas, pastas e tags.
 | **US10**  | Deletar uma pasta que não uso mais | Manter meu espaço de trabalho limpo e organizado |
 | **US11**  | Mover uma nota para dentro de uma pasta | Organizar o meu conteúdo |
 | **US12**  | Associar tags a uma nota         | Deixar minhas notas categorizadas |
-| **US13**  | Adicionar checklists interativas dentro de uma nota | Acompanhar o progresso de tarefas |
-| **US14**  | Favoritar as minhas pastas       | Visualizá-las com prioridade |
-| **US15**  | Favoritas as minhas notas        | Visualizá-las com prioridade |
+| **US13**  | Favoritar as minhas pastas       | Visualizá-las com prioridade |
+| **US14**  | Favoritas as minhas notas        | Visualizá-las com prioridade |
 
 ### 3.3 Épico Dashboard
 
@@ -56,9 +55,9 @@ Esse épico agrupa as funcionalidades que ajudam o usuário a visualizar e acess
 
 | ID    | Eu, como usuário, gostaria de... | Para poder... |
 | :---: | -------------------------------- | ------------- |
-| **US16**  | Ver minhas notas acessadas recentemente no dashboard | Retomar meu trabalho rapidamente |
-| **US17**  | Visualizar minhas tags mais usadas no dashboard | Navegar rapidamente pelos meus principais tópicos |
-| **US18**  | Ter um campo de captura rápida no dashboard | Salvar uma ideia sem precisar criar uma nota completa |
+| **US15**  | Ver minhas notas acessadas recentemente no dashboard | Retomar meu trabalho rapidamente |
+| **US16**  | Visualizar minhas tags mais usadas no dashboard | Navegar rapidamente pelos meus principais tópicos |
+| **US17**  | Ter um campo de captura rápida no dashboard | Salvar uma ideia sem precisar criar uma nota completa |
 
 ### 3.4 Épico Template
 
@@ -66,10 +65,11 @@ Esse épico agrupa as funcionalidades que ajudam o usuário a melhorar sua produ
 
 | ID    | Eu, como usuário, gostaria de... | Para poder... |
 | :---: | -------------------------------- | ------------- |
-| **US19**  | Salvar uma nota como template | Reutilizar sua estrutura e conteúdo no futuro |
-| **US20**  | Criar uma nova nota a partir de um template | Iniciar meu trabalho mais rapidamente e com um formato definido |
-| **US21**  | Editar meus templates | Mantê-los atualizados |
-| **US22**  | Deletar meus templates | Manter apenas os templates necessários para mim |
+| **US18**  | Salvar uma nota como template | Reutilizar sua estrutura e conteúdo no futuro |
+| **US19**  | Criar uma nova nota a partir de um template | Iniciar meu trabalho mais rapidamente e com um formato definido |
+| **US20**  | Editar meus templates | Mantê-los atualizados |
+| **US21**  | Deletar meus templates | Manter apenas os templates necessários para mim |
+| **US22**  | Criar templates do zero | Utilizá-los como base para criação de notas |
 
 ---
 
@@ -93,6 +93,6 @@ A seguir, é possível visualizar o product backlog do Estrato, contendo todas a
 
 | Versão | Descrição     | Autor                                            |
 | :----: | ------------- | ------------------------------------------------ |
-| 1.0    | Adição das US | [Andre Cláudio](https://github.com/andre-maia51) |
-| 1.1    | Adição do Product Backlog completo | [Andre Cláudio](https://github.com/andre-maia51) |
-| 1.2    | Adição do novo épico e novas US | [Andre Cláudio](https://github.com/andre-maia51) |
+| 1.0    | Adição das US | [André Maia](https://github.com/andre-maia51) |
+| 1.1    | Adição do Product Backlog completo | [André Maia](https://github.com/andre-maia51) |
+| 1.2    | Adição do novo épico e novas US | [André Maia](https://github.com/andre-maia51) |
