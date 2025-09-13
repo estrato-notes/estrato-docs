@@ -1,0 +1,634 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../backlog/">
+      
+      
+        <link rel="next" href="../prototype/">
+      
+      
+      <link rel="icon" href="../assets/logo/logo-blue.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>Diagrama de Classes - Estrato - Documentação</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#diagrama-de-classes-uml" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Estrato - Documentação" class="md-header__button md-logo" aria-label="Estrato - Documentação" data-md-component="logo">
+      
+  <img src="../assets/logo/logo-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Estrato - Documentação
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Diagrama de Classes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/orgs/estrato-notes/repositories" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Estrato
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Visão Geral
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../backlog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Backlog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Diagrama de Classes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../prototype/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Protótipo de Alta Fidelidade
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Estrato - Documentação" class="md-nav__button md-logo" aria-label="Estrato - Documentação" data-md-component="logo">
+      
+  <img src="../assets/logo/logo-white.svg" alt="logo">
+
+    </a>
+    Estrato - Documentação
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/orgs/estrato-notes/repositories" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Estrato
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Visão Geral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backlog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Diagrama de Classes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-diagrama-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Diagrama de Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Diagrama de Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-link-para-o-drawio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Link para o Draw.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-imagem-do-diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Imagem do Diagrama
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fontes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prototype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protótipo de Alta Fidelidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="diagrama-de-classes-uml">Diagrama de Classes (UML)</h1>
+<p>O Diagrama de Classes da UML é o blueprint que descreve a estrutura estática do sistema. Ele visualiza as classes do software, seus atributos, métodos e os relacionamentos entre elas, servindo como um guia essencial para a implementação e manutenção do código-fonte.</p>
+<h2 id="1-diagrama-de-classes">1. Diagrama de Classes</h2>
+<p>A seguir, é possível visualizar o Diagrama de Classes do Estrato:</p>
+<h3 id="11-link-para-o-drawio">1.1 Link para o Draw.io</h3>
+<p><iframe
+style="border: 1px solid rgba(0, 0, 0, 0.1);"
+width="800" height="500"
+src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&layers=1&nav=1&title=class_diagram_estrato.drawio&dark=0#R%3Cmxfile%3E%3Cdiagram%20id%3D%22C5RBs43oDa-KdzZeNtuy%22%20name%3D%22Page-1%22%3E7V1rc9u2tv01nrHPjDR8Pz7GznGbXrdNE%2Be093y5Q1u0zYksOhIdx%2Fn1FyAJiiA2SYAEREaBp9OIFF8C9mPtjb0XT%2ByLx2%2B%2FbKOnh9%2FTVbw%2BsYzVtxP77YllubZtoX%2Fwntdij%2B175Z77bbIq9pn7HR%2BT73G50yj3PiereEcdmKXpOkue6J236WYT32bUvmi7TV%2Fow%2B7SNX3Xp%2Bg%2BZnZ8vI3W7N6%2Fk1X2UO41vXD%2Fxa9xcv9Q3jqw%2FOKLx4gcXP6S3UO0Sl9qu%2Bx%2Fn9gX2zTNik%2BP3y7iNR49Mi5%2Fv3v9e3312fvlt792X6JP5%2F9z%2Fcd%2FFsXFLkVOqX7CNt5kgy9t%2F%2Fr%2B4s8PX55%2F%2Bz%2F%2Fu%2Bt%2BfG9F%2F71b2EFx7a%2FR%2BrkcsOddvC1%2FcPZKRhH99if8EQ8%2F%2Bto%2Bv0s32cfyexNtZ9ENGV4TTX2%2BoxpWu9zxPt0lWZJu0K51fIe%2BOX%2FIHtflFW7S580qXl3dkB3r6CZev9v8Gkf5LfN9SEqyKNnUttfr6GmX3OQPgm%2Fz8pBk8cen6BbveEFCjfZxjl85zl%2FjbRZ%2Fq0lPOZ6%2FxOljnG1f0SHkW8spTimVY%2BG75Y6XvaiFRH4ealLmBeXOqBTv%2B%2Bri%2BylEH8pZFJnRkJlRZjZro77Ltunn%2BCJdp3hIN%2BkGHXK%2BjXdIj6v5rPZUE4p33SXrdeM8NMLZfqKwOkf7iYnW6%2FTlDdFovAfZmrh%2BBN%2FUdctx%2F9z1TY3ju8uw%2Flccso3XUZZ8pa0KNHvlHd%2BnCXriSjTsxnynd3e7OGNmu3pOLgHYxaub3ddkc%2FP96uJL%2FM%2FL9i5MSytQn%2F9PoEa%2FJI%2FrKJ%2B2pi5H6%2BQe6%2BgtGvNc2fGoJsikvim%2FyFI8NbcPyXp1Fb2mz3jkdll0%2B5lsnT%2Bk2%2BQ71tW9nCHZKL2D5VFHfMRnliJQyNl7Mt1mY9fv0TfqwKtol5U7aEuAT3yMtvfJ5jzNsvSxQ8JqyiBf2Mi3rrE0PKP6s2zKbngGYzXMIFwGPiudpi%2FBcIByYzJysyhPeYP%2B%2FfTpHdrlrfHkrpKv6OM9%2FogP2USPcXEQMibJ5p4chp6idmTLyfFjlKwHn%2F0U7XYv6XY1%2BAK32zjK4tWbrLjCW7RxnaCfI3KN56fVqGuQXTfb5p7mqQ0VRsKXtZlwwDoTtS5dL6zUO6QcaBCv8mPeOvs9H0oZxLtSdO7dOsdCD8lqFW%2BwQqZZVDfmT9j%2B5TLqnqP%2FkNReGEv3xEUPfoG2zf02%2Bg8fvs0u0g36LVGSK1%2BMVPslxuotrrWddrFfaUutRGaKWyttR5FWWv3efJ3k01uIQd1pi8vAI5rNdbyf9GssE28XJiMYNisYNiAEOYSrob5tcWxDOPrmnxbwZPMQb5NM4cSbIvZYgjl%2Bcha3u3Cxe%2FrLSn%2F5%2BOH5T3fzvHBYZE7MAhr4DSUC3pdnHITkjnzxUj4dtkWbdPuIXfD5%2FpimjUlqO6JHrFprdivBQOAOKyDZTZ%2FStFoJYMmKp261ghikfIifsKykePi4LOCEIMYxfjYQ47re0rZrIKYPw1i2j05QhGFApXFZ8KvNZbu57DY83PbSEZh6ZTPPwtcT6xzPfPQ1Ps1zGgWORZ%2FO9h9BOIZPu0s2q%2FPXd6vTOgCun2hfCgC8%2FRX%2FjfHuaQ31fsxB66gr53F0y4%2F8mqIf0AowB6FQjU3HYFNJOucK6JylSuk8B8w1fIy3XxOMFebjrX%2B%2BlIPlLQ3D3v%2FR3tryjaXvMiLkGPbS8fZ%2FEOD1gqWrSp5cMAfxTEPDysTV4aI2PyPMT6XHY2JjDtmxLXWi42nkNxb5iYuBW9kCQSOizCP5LTBwG98nO%2BRaTldZurcgF3n67%2B31n2d1q7J7QuOL97YirnWKzDx9qSu8a3%2BlN8%2FZwzWajI0gliuSifiCp3Tq9QIDvfoNP%2BVH9j47533RL0Ju9DTLH5n%2BBQCS1OBvUuvrDVY7Y2nU%2FzqWsUapYcCqYa5uCHxtEWjSy1HTYkMnaIBDejnK8tngIpcuVetRsAyxCVACBkmAUdm9tohDGyIRQ1Rp7WgYeFjsF3CUPGjsJ3vu27HfIQFfCGV8lQM%2BDfa0jT2UjW0He6CemTLMLIgzHDbFjmWUQXJHViooqwQopDCW47GVgkEAlKOZoaVqPjlqC46vUtDhr%2FKsT40fQkWBjRqQZTmnc6wVBAfDYrNmlJfUYZq8ME1A8EiYZi%2BtetEgncIHgrSqcKUulySOkm4%2FLDbIbysFrOGH4QV%2FIsV%2BGqOMkNTKKowqlYNk0ZVQJgc%2FMlQtpUPAthBQ0rQHvCZI1ayzgT8VLGn3NaX7QkEKlW1uFL1P7r9sNnVQ%2BK%2FLHhe2d0TgkdoXyfRFIbfYzcUX2VApmvZFYr5IeNqn9kWkwKbhi6gknfZGEwZTKJqivNHMnJENGA3G80DdWLS7kRmBacc1ZlXW4pbQ2TgutpxTOy5BxyU%2B7ZM7Lrbosl7PpL3WlF7L84xZey2o6rKnSe0GTdr9Fq%2FgLG4LLcOeCKniZkcGEK9R1r5b41%2ByWEXbz6fb%2B5tTo1gfJf%2BcFf%2FibyzXLTbqH87OTqD%2Bty4v2NOqphORh%2FKhLre%2BzMaHQgWo2oeK%2BVDhaZ%2Fah3ps%2Btls0%2F2aGvT6y2p6IX3aFqvg5czxjq14Iwlp72vvPDKhdWtVBDc%2BG2gfzVjbdrgM6TSpCVAKHXS8AzYyRfiQGfF4s8qX7NFW%2BpS7F7SnxG2mhR1otHvIR9CkJ4YeWjSi29d%2Fyq%2Fyjf%2FF3yC3U26%2B%2FVY%2F8u0r2fqWZP%2FUPtfOQlv7k%2FDG67Bp3KXP29vy13bWoiHEeh9nHQeS2ux4RXGXdVYgVPZsaHEByYMYHiVfVSEKuUTxM8uz9rLDXMj1ei5UDANzIVm1CwHYfKhMLol84ba5moh1ClglzEgSLb8u0ObSMIM%2BkcZb75HrRCOVVzGpkFkyab0ySxqs5yCzdhO%2BDZVZ5kItMoskKHqtHVbCodYHtkn%2BmsDS8j5tz%2BUFZtfx6EPxBHIVCAz81SuQ4%2Fs1DUKakIf1HVqENppqUNMs3wlpV2F65hw0C%2FIGnVmBKTTL9htGfLBm2T0XUuwNHNYbbNIM6EE%2FsupUOUSWpBWc8Fgi8YJQJ0SX6JMyMPn1qax9YqbzCOtT%2BbsBe%2BfGNYLlj0ZfabLh3R%2BgIus09OA0NL%2BIwfbB91njAKVbTEdCwgWWEjYo5WSrzJIMj%2FBQvkg04%2Fng5jlrnGQQOTvZXUZfkdxk5QPcpOk6jvi7hiZirNQ57BG0k5U9k57DNk1VpJMmC6YYKdBJbNnzbgI8aqqy2HCIz7reo6acxLhCU07OGXfYLg08AtY0VtCU7sVSxjMI1Wlp0yjUa%2B4Km0aQYfKQlhFyiBW7ZJ5oyI0ftihn%2B4%2BD2CXzEwexS75Zr89fce0OfOGrZJfRNrZ8RtigCjBPggOgmSdnBk9l6WLAqYuWImX02fp6LHaadXIGDtuj%2FbXlsZkCB%2BpyZxJMQErqA87Cbe7Rzxa5nQktljfvFq3R%2FG9QGHyOc7c7RkTF8lqw1LLgOn95Rk1yKwtaiTIYvRep6yYh5mVzr0hCIIvum9e7pnYJZRc46Dq1JZduyX3%2BrH8HexOknM2FfXmWXIPp0WBafNpDFkyD064KTPttYLpIbWIDuGdawls1OoqL0r68g3EzD5VTkfzM74KN7zsqZUwRL%2BFjar3E1b3f8t5bCEV3PFHLL%2B4iaWq51SMybfhG12nhL1puWLgYlQ8SrVbIw1ynHb8aOSXuJxg3AVl6j2AFyc2LTcK4O%2BOwDV8hDwYPfF8ULuKL7IqY8bTlPnDUSN%2BZI4DUrv2grj1kgzTQxpukX0n66j3bXJ%2Bbcs0AO4s4zSXC0BE52T4kMKGEzCr4I%2BD3D3bHR9qqjJAaGS%2FEA2WEHCef70WHC2N7a4QnnSQI%2ByZdWYthZ7DQEigMCgnaOVjZaEAi7odS9QORvTCql%2FIzCijPB%2BJVwPWWNZRx4LhrdWY07D7V2PrH9YLAiw5hpCRjDRqGe2zXNTJUOxZRH1mts5piRtdmoa%2FnQBPqKat05mgaPsJKZ36%2Bwd6pMQxJ3LtBQ2mlFDqDQb3ZEiFr7l0FATK%2FqFUtZ5SRgN4IrYppA5YWNjxurWSugYPh9cqCtcoag4zI75kyQnFlPBfwI%2BtYfPTSnfi0H5DnAn5itiWrsUimfdZ0Pqsqa5mN02IDldJp9VHsVn7rcqTrutTeS7n3mjVLE%2FzImqVpvPeaM0sT%2FMQsSxOTb9P%2Ba8KYy6L9l8u%2B9wqUl1CZwEAvFhxAyqsjtaPxdfyUXoK%2BTlmRpcXmmbSvE%2FV1wtMOFFkelJEwBN%2FsxUy8dHKfIeRYJ7YI0xuv%2Byn1qZenhxRX9TNglVecgqfHNehFC9tumAtenh7P67mQLAasxgOb5aqLUkarEHztuHqhN9262GNut5BP9NGhhkWLf2g4PQoAsldBJFkjNKWrFKNXUfwZKYrjSFIU5kKSFMUjy49Ve90BqN9CNhI6iKJYgdNQFKtbUbqp30LXppXHDFRSv41RlM4QaRJOxUZrvWsMVRSz50KKmd98FukYy%2BW%2FGGGeBSWweLWC1Zgnk1yi3n97UD5gNp44pvE2LXq8gfc0H3S4XXbht6znYXJVR1buI4fa0LRJwzohN%2FRNdkoDqEvYM5RNqsVMKjOdx1fw4%2FJPXm1qfNNGABsFEHZo2oZDXg5Qn6gqcfjDsByy%2BOuyRal1AnpoAlpA3CpbsbQMj5U14gqAVJ5jLAMvdKuTAM9gqiJBZLPTnByIbS%2BJOwiJYctlJ%2BA11Plx6WyHUtLj%2FToVOIpUCijKZCRCJ8sly0BF0SIoBONlAM7zQrzTR0yDyMscMx9k8qMTIQ5AJr6%2FDK0aNHH6kMmheRGhNwFqwynGiyhcUTM5LyJUR4Ub3XJeRJKI2NNTndU3BvXflacehh%2Bxes7RDImtQ6FZEmcGa2Vp5uQsiSyKKQRP8yTOwJ9b9Gt9DYNeBLSAJL9rOEvSgUj5dFeVTwdWVsT5BzU54BwMmC%2BjRrtNApslJPIEUJdpj%2BcHFJ55oG2kbeaVUQSy%2BfE660fJclFxfxTbfDSBxE7xsoKU92pjxGs8A0QXKPAMQqCy58nkcfU1%2BDYEbzj2x5bIvbjMrgLw3HR10P01qcbc3I3H4uVWoyMBMsPFAi2IWZPWzQM0O7azRMjYD5CLwrlhGjOT69V5WSx3SUAszeShbGG%2FAzFTNHbdsZi2NkKdRhKwbZuoKOOy0%2FnS0Vx2wvMOcdm1zLuqvoy2hGmTzq4BaQeC13ZKOwawSoWmkjjt%2BoneJIHLdkI2jR5%2FAHsOUbK1uX5lNX0OW47z87KyDVjhDJdhWK%2B98ih05wA1Aq7jUjUCDjDdjqpgweWoFDm%2BEs5KyIVKOJsTBZRwhuHSDut%2FxSFzLOiEu2zZMm0mK6VjR2kegl8MyYKLt3Rys1KGj00SSIBqoL8CyVOV%2FyS2pCZNbTWbmghgkgyXxe%2FgRlU6KltbsfS7l0avrYgLAUTJNV2lo9WW8dSEbrNwWmZoL%2BuSYdCYeG5Oi01%2BFk6rj%2BxN87Ud1nXJyJdO6rp07nS865KRZJnSdbGJVCBVp53XdM7L9oxlWK3VIRFp8GkMcl7KqEotqOJkANWbDtPm5et8brEd5euUMZVaEAWh9nVivk5YCCCm0oP4Opithw3VZ8vltnTMioKnJLQKwhN1nDxkoaGf5q30N%2F00b6W0TEHKYxFafWKMhtK82X7PhRST8oRsZuEgIusZVl1ol3ghYTDBFGZn82lhNjznwMLcVUXQz8QWTCfLXlOWm03bvLLsN2W5eSFpTGw0%2FbBdsoSrZWJjkyYHUZTA908oJjZjhKIYlJJQCsKu0dYVJvAm1JjOOEdrDIfG%2BBZ9H6dknVWqMUB7fhbdMxpzbGUWctiwFtXKOmHD8oKQwboB1Knokuo5%2BaUUHPm84yulEOgp7ZsaO%2FAkvf7ucAxYwLthriE11im7wQX2%2FAJWdaVStsEFUiEQh7mviuAKeE2LMMPVx06GK51cG0H2VKmw9JchNLmW5UkUlObV6TQhfifxafeBdNohX%2Fzjtif3j5LRCTlSTec0a0dr9nraQ%2FM36XWG8fxNwsx3U%2FM3eVARe8XfhMPq3PQhe3JWfRpE24TPG8TZdP76B4Jyp81l1bGX3VNBveWjgip%2B%2BGgeKGBINQPUzLCuLN2enAGKNelI6jT90xz8P%2B3%2BwYZkH%2FL%2Fjir%2FD7zVYZHny%2B%2BbbE0NcKmtyhieDP6qqo7WdUhSZPStw4LCNjppoCjKySQ87VDnOjTtqoAicVItfevIJuxb19EGHxVTbkn6W9kxXvuz7KMTvlHbXcSwIrpGyTzEzzvE3Fe3jc%2FNmEJ946BWKXuXEoTQNN3QPEBa83XU%2FChNGccA%2FMaPbI%2FqiV3UxEIyZEbG2yyUoTPwifX7K4TQmZxZPyA4gycdguQQqVAdMIljsE6eHI125m6beMGOjBQD7IHZMvafmCBnbM7IDllf4xiq1ozg38AWeUtOZDck4wiLwGxuMeib57D0AnOsAAPjNZvFKnREr4MfacEPv5i1lIJxVnC4qhJQNotx2FZLDShGpE8qdZRezWWpao60oaykjnaEctHi085rC5SZArByWPf9z8VzNFwH1OgPiYsyXhob4tyV0tqv%2Fc0Yf6OselgZ8Yytq4fH%2BxvhaYeIZxT5GzjpzsYpB2nR9Af139uBfdLovz9R2LFcGvf%2B9vty6aK3ZZnM7BQNmA7p%2FiQvJibNcqINmJ7RcyHV7fdstKRSZDn6gHHKgur8bZW8vQI4fr2Z31wabtCtBUCP8gg57sy19zYSE%2BA0iRxbtPjZ1kA5doOeC0lqJHbDBjmUf4BG4pCNHg9i182g2XovLtYUR4VFG%2FzAdQ5s8bk1pbO2aApNsZuaYgzUFKepKc0LSdIU5j5lEl6ppnispmTx4xMaeaCO%2BMhWb%2BT03Qd0TGwa7PtdTcOEomJL1eqNx0EAfXwLLpUoCy24wHPj2DNuuv%2FwOfjP5nt89RItnj9c%2FeE5%2F%2F0rXrCw8LpVj3XObGjOTEDGiBui4Q9vxGuaEmJeUFBYg8%2FZeJ8l2TqGCDB7C27x2dho52OLz8%2FTafzluj39vDdIiO5zSLa4LYxRfo9ttNmRCc1LZvbfrfFAL1bR9vPp9v7m1ChKjMk%2FZ8W%2F%2BJuciBtv1D%2BcnZ1ArcL5r8yXOFdvyt%2F5Ftc1IyjW09%2FLNYDFa7%2B6Lq0rcAaoeacxlZ6%2FbLI1SdNq%2FcoHkfSlnEk3gRdXHXS5zIOqA4%2BZ%2FKBENJoBYc6Ip7lKCEAeC6ytV8aAAAS52joKLu54wuYRYkA4ZGMbGAXvGRBIdFTUSpdbZ%2FTmMEKE6srj6AvAiwPl2eXtdlJIDLpGRdMZzAy7ylJUgM4AVFRLkaYGrKYS0dOcBjPw6I0cBlQm5oJJDF%2BVRw%2FY%2BvQ8RcECRMqQscCxGWTv8Gtm6JM%2F0fu0zZJvswL%2BUrT2gBsUQWUFQwHLVawxpSCmFJ92IJYAp10ZWQLEZ1wjSyjtzOU2ffwjRXhqg%2F73jkqt4hwiS2HaRaVQ2a7%2BXj76KWrdgeUeTvKG9jtyosniOfAI4JGonoeYZ3ZEWp4EX2H4UxQZU467M%2BNUe0mm0nEqUPfw8akjckHaCxI1CHNfgD9at4TOzUF6LKiHMZohAdXDVSJs1qWyQ5oHYxbA3jV7VycdUGg8VaULJhsK1oE9TYbREyNqEyMiPSa%2F9LRjcFBa1FFiQF3KGoMLUWKITzvAiQFOuzJODCjy6sDgFbrDWxfUMTWyDGGU3YGup8DR0u5ZoObTRAAlS8bDUN57ONLtIDbRUPaH8DPcqEQZORdApv3z8puMzh87Dgsc%2FACaUFfZhHJQnR5hhSx%2FQzg9NUuj9mdCmufg93HW%2Fopj5lg9C7cuAoTabM5Mh6rSQlV%2BSSRVJTZlQ3iZCpS1njusS2gtkK2BB%2B4yWI0xxjSgyyDfPmwDuqPJt8c3oMugCT5oBafTniOtrUFovzOh35md42EzpKXjueT1PZfa%2FSh1P5VW%2F0DuR6dSR7sf8Wmf3P2wqVQwKaYd0HQOyBnogAJlQgPVwAwg3dLh0mz8FT9jsaC%2FcpX5K4j5TfsrMX8lPO3B4fwVvHbAmh5wUU97rCk9lmcM81gyXjYPiw1rLNjCTMb3cPe7a98zZjlw1m%2Bahx9Zc0WOLzuZ85vm4bdysL7nEMR75gnFAOae9PB%2FVVxkrkGRTC7DkGxLp9gjK8L9xGEl4ugnDisHewriMLfB6GQFjfo1XuIw3%2Bm5kCTiMJ%2BAYbJs6oUNaVdAHBawRnBiHko%2FoNUhrDbbeSiDwKKVJPBmqSSdyGwKJQlsWrZdZ6CShGHPhSQpSdh87YV9AB5Kwuh3aCVZ2k5YVxRzaeRhiDBzZM2d1PWkU0dG6ENn70M%2Fv%2FCEvKwMDaA5UB8cp%2BdCivmFPY6FgJq8rpLoMd2srh%2BSUmwvkzWRzr0QW06n3JZCtsB1RiZlj%2F1Q3B5XaoCvZzfxU9iLoPgYVLvII%2BsivYtXN7uvyebm%2B9XFl%2Fifl%2B1dmJLj6hLdxdU2CX2qR8vhwiKGWphp2Oq7kiQTv2iozsIty%2Fzanqx5AqEsUcu4yq65ELFhcgg1lelNU1VhIhSX0wonJs0Ca%2BWe3ZgAHyJDPWFiNrMhEPLqPNmgzVgu%2F3Uk403iCSK%2BZsiMtnXQ0eZIyivyHcbSKbixK9dhGD2uAw4puCJsxe7BYN0D7EYmBDxmA%2FAsvOar1Hn9g90028yVJPkHxqWRonPmybgPMB3nECTdbBhxRFbMtGgzhgbVY18sdVBD5nMUY8o2ZCPMUWEAwworl2cGTrcBVG%2FIAJwLHhdOZ8ccvwkah%2BJcJ2yal6Z8ynqlRhNQk0fmRuCB0X2CaTZHRfwMNzgAmPbZaPWYLKNNVjMq10ha3CazjGzaFw34sQQwpmP7jQEnnWJTDTgh3TtOCV8EpJu8GnDgpZKqBvzT9tVOHz5c238H3yIjvfv%2BWxIS8D3S9RuDYpgBr4UTXB8EHa1Ejx9wevwidDmIh%2FfdhmcynabwcC9WmL2XkuTjkSVq3sozu10wE94MOEN2OANqmBxwLaRh%2B5URl9IXbnAtuvyhTsNI%2F3y%2FinkHUzFktZuSZDQpgnh1bOE0MwvstSQpmcXoGKHIan24gLQ2t50iqjJoc5ti1v394cgBP%2FyermJ8xP8D%3C%2Fdiagram%3E%3C%2Fmxfile%3E"
+allowfullscreen
+></iframe>
+</p>
+<h3 id="12-imagem-do-diagrama">1.2 Imagem do Diagrama</h3>
+<p><img alt="imagem do diagrama de classes" src="../assets/class_diagram_estrato.png" /></p>
+<hr />
+<h2 id="fontes">Fontes</h2>
+<blockquote>
+<p><strong>Martin Fowler (Autor de "UML Distilled"):</strong> "The class diagram is the glory of the UML [...] it shows the static structure of the classes in your system." - <em>Fowler, M. (2003). UML Distilled: A Brief Guide to the Standard Object Modeling Language.</em></p>
+</blockquote>
+<h2 id="historico-de-versoes">Histórico de Versões</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Versão</th>
+<th>Descrição</th>
+<th>Autor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1.0</td>
+<td>Adição do Diagrama de Classes</td>
+<td><a href="https://github.com/andre-maia51">André Maia</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">1.1</td>
+<td>Atualização do Diagrama com a nova classe</td>
+<td><a href="https://github.com/andre-maia51">André Maia</a></td>
+</tr>
+<tr>
+<td style="text-align: center;">1.2</td>
+<td>Refatoração do Diagrama</td>
+<td><a href="https://github.com/andre-maia51">André Maia</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
