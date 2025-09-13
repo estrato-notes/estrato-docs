@@ -6,13 +6,12 @@ Um Protótipo de Alta Fidelidade é um modelo interativo e visualmente detalhado
 
 <iframe
 style="border: 1px solid rgba(0, 0, 0, 0.1);"
-width="800"
-height="450"
-src="https://embed.figma.com/design/wmUiUCJMbyCzg5Dn3aHpB4/estrato-prototype?node-id=0-1&embed-host=share"
+width="800" height="500"
+src="https://embed.figma.com/design/wmUiUCJMbyCzg5Dn3aHpB4/estrato-prototype?node-id=36-3175&embed-host=share"
 allowfullscreen
 ></iframe>
 
-- Para poder visualizar o PDF do protótipo [clique aqui!](https://drive.google.com/file/d/1PlDMl82tomLKTKZTh2KaTjMzImsBNuJ_/view?usp=sharing)
+- Para poder visualizar o PDF do protótipo [clique aqui!](https://drive.google.com/file/d/1F1r8xPkZfpFdOcjypa9g4HB_QHJr4meI/view?usp=sharing)
 
 ---
 
