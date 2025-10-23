@@ -27,3 +27,4 @@ nav:
   - 'Backlog': 'backlog.md'
   - 'Diagrama de Classes': 'uml-diagram.md'
   - 'Protótipo de Alta Fidelidade': 'prototype.md'
+  - 'Documentação do Banco de Dados': 'database.md'
