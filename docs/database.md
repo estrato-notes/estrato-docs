@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS public.users
 END;
 ```
 
-Para visualizar o arquivo SQL com o DDL: [clique aqui](https://drive.google.com/file/d/1zmo-J6XlUU3DtaVMBT2I57E0zyjrafu7/view?usp=sharing)
+Para visualizar o arquivo SQL com o DDL: [clique aqui](https://github.com/estrato-notes/estrato-docs/blob/main/docs/ddl/estrato_auth_ddl.sql)
 
 
 ## Modelo Físico e DDL - Estrato Core
@@ -130,4 +130,4 @@ ALTER TABLE IF EXISTS public.notes
 
 END;
 ```
-Para visualizar o arquivo SQL com o DDL: [clique aqui](https://drive.google.com/file/d/10A-jQIcOXvW1Ut0urL9lF3XY-IAqV1Ni/view?usp=sharing)
+Para visualizar o arquivo SQL com o DDL: [clique aqui](https://github.com/estrato-notes/estrato-docs/blob/main/docs/ddl/estrato_core_ddl.sql)
